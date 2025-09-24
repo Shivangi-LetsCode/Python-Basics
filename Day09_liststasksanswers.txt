@@ -1,0 +1,88 @@
+# Accept marks of 5 students in list from user, calculate average, highest, lowest.
+# Remove duplicates from a list.
+# List Reverser Without Using [::-1] or reverse()
+#Find the Second Largest Number
+#Search element in List
+# Product of all elements available into list
+# Count Positive, Negative, and Zero in list
+
+#Accept marks of 5 students, calculate average, highest, lowest.
+marks = []
+for i in range(5):
+    mark = int(input(f"Enter marks for student {i+1}: "))
+    marks.append(mark)
+
+print("All marks:", marks)
+print("Average:", sum(marks) / len(marks))
+print("Highest:", max(marks))
+print("Lowest:", min(marks))
+
+
+# Remove duplicates from a list.
+original = [1, 2, 2, 3, 4, 4, 5]
+unique = []
+
+for i in original:
+    if i not in unique:
+        unique.append(i)
+
+print("Original:", original)
+print("Without duplicates:", unique)
+
+
+# List Reverser Without Using [::-1] or reverse()
+lst = input("Enter elements separated by space: ").split()
+reversed_list = []
+
+for item in lst:
+    reversed_list = [item] + reversed_list
+
+print("Reversed List:", reversed_list)
+
+
+#Find the Second Largest Number
+nums = [10, 40, 20, 30, 40]
+unique = list(set(nums))  # remove duplicates
+unique.sort()
+if len(unique) >= 2:
+    print("Second largest:", unique[-2])
+else:
+    print("Not enough unique numbers")
+
+
+#Linear Search in List
+lst = [5, 8, 2, 9, 1]
+key = int(input("Enter number to search: "))
+found = False
+
+for i in range(len(lst)):
+    if lst[i] == key:
+        print(f"Found at index {i}")
+        found = True
+        break
+
+if not found:
+    print("Not found")
+
+
+
+# Product of all elements available into list
+lst = [1, 2, 3, 4]
+product = 1
+for num in lst:
+    product *= num
+print("Product:", product)
+
+
+
+# Count Positive, Negative, and Zero in list
+lst = [-2, 0, 5, -7, 3, 0]
+pos = neg = zero = 0
+for i in lst:
+    if i > 0: pos += 1
+    elif i < 0: neg += 1
+    else: zero += 1
+print("Positive:", pos, "Negative:", neg, "Zero:", zero)
+
+
+
